@@ -1,0 +1,8 @@
+langchain
+langchain_community
+beautifulsoup4
+fastapi
+langserve
+uvicorn
+sse_starlette
+streamlit
