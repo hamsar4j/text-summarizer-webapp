@@ -8,8 +8,8 @@ and the article will be summarised into concise bullet points.
 It currently can be done with the Llama3 and Gemma2 models from [Ollama](https://github.com/ollama/ollama/)
 that are optimized to be run locally on your own device.
 
-The `serve.py` contains the server-side code that uses [FastAPI](https://github.com/tiangolo/fastapi), a web framework for quickly building APIs with Python.
-The `client.py` contains the client-side code that uses [Streamlit](https://github.com/streamlit/streamlit), to quickly transform Python scripts into interactive web apps.
+The `serve.py` contains the server-side code that uses [FastAPI](https://github.com/tiangolo/fastapi), a web framework for quickly building APIs with Python.\
+The `client.py` contains the client-side code that uses [Streamlit](https://github.com/streamlit/streamlit), to quickly transform Python scripts into interactive web apps.\
 The `text-summarizer.ipynb` jupyter notebook file can be used for testing purposes.
 
 ## Steps to run the Webapp
