@@ -20,13 +20,15 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 # choose llm
-llm = Ollama(model="llama3")
+llama3 = Ollama(model="llama3")
+gemma2 = Ollama(model="gemma2")
 
 # convert chat message to string
 output_parser = StrOutputParser()
 
 # combine into LLM chain
-chain = prompt | llm | output_parser
+llama3_chain = prompt | llama3 | output_parser
+gemma2_chain = prompt | gemma2 | output_parser
 
 # function to get text from webpage
 def get_docs(url):
@@ -38,11 +40,18 @@ class Url(BaseModel):
     url: str
 
 # function to summarise text
-@app.post("/ollama")
-async def summarize_text(url: Url):
+@app.post("/llama3")
+async def summarize_text_llama3(url: Url):
     text = str(url.url)
     input_text = get_docs(text)
-    result = chain.invoke({'input': input_text})
+    result = llama3_chain.invoke({'input': input_text})
+    return {'output': result}
+
+@app.post("/gemma2")
+async def summarize_text_gemma2(url: Url):
+    text = str(url.url)
+    input_text = get_docs(text)
+    result = gemma2_chain.invoke({'input': input_text})
     return {'output': result}
 
 if __name__ == "__main__":
