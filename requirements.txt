@@ -6,3 +6,6 @@ langserve
 uvicorn
 sse_starlette
 streamlit
+
+# llamacpp with metal backend support
+# CMAKE_ARGS="-DGGML_METAL=on" pip install llama-cpp-python
