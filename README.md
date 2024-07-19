@@ -12,7 +12,6 @@ It was done with the llama3:8b-instruct-q4_0, gemma2:9b-instruct-q4_0 & mistral:
 
 The `serve.py` contains the server-side code that uses [FastAPI](https://github.com/tiangolo/fastapi), a web framework for quickly building APIs with Python.\
 The `client.py` contains the client-side code that uses [Streamlit](https://github.com/streamlit/streamlit), to quickly transform Python scripts into interactive web apps.\
-The `text-summarizer.ipynb` jupyter notebook file in the `tests` folder can be used for testing purposes.
 
 ## Steps to run the Webapp
 
